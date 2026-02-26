@@ -35,7 +35,7 @@ function App() {
       case 'products':
         return <Products onNavigate={handleNavigate} />;
       case 'product-detail':
-        return <ProductDetail slug={pageParams.slug || ''} onNavigate={handleNavigate} />;
+        return <ProductDetail medicine={pageParams.medicine} onNavigate={handleNavigate}/>;
       case 'contact':
         return <Contact />;
       case 'dashboard':

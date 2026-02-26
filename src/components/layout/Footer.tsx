@@ -40,15 +40,23 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 78389 04064</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@sanctumchemicals.com</span>
+                <span>Info@sanctumchem.com</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>Account@sanctumchem.com</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>Om@sanctumchem.com</span>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1" />
-                <span>123 Healthcare Plaza<br />Medical District, NY 10001</span>
+                <span>SC Solutions Pvt.Ltd <br />Lajpat Nagar, New Delhi 110024</span>
               </li>
             </ul>
           </div>

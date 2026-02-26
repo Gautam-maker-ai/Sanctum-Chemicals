@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,21 +11,44 @@ export default function Contact() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  e.preventDefault();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  emailjs.send(
+    "service_jkfql7a",
+    "template_bsi8lmk",
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    "WOa2XEnT5lips_71-"
+  )
+  .then(() => {
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    }, 3000);
-  };
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
+
+    setTimeout(() => setSubmitted(false), 3000);
+  })
+  .catch((error: any) => {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send message. Please try again.");
+  });
+};
 
   const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
-      content: '+1 (555) 123-4567',
+      content: '+91 9138420299',
       subtitle: 'Mon-Fri 8am-8pm, Sat-Sun 9am-5pm'
     },
     {
