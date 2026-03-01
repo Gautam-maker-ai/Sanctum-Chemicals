@@ -11,8 +11,8 @@
 
   export default function Header({ currentPage, onNavigate }: HeaderProps) {
     const { user, profile, signOut } = useAuth();
-    const [showLogin, setShowLogin] = useState(false);
-    const [showSignup, setShowSignup] = useState(false);
+    // const [showLogin, setShowLogin] = useState(false);
+    // const [showSignup, setShowSignup] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const handleSignOut = async () => {
@@ -91,7 +91,7 @@
                 ) : (
                   <div className="hidden md:flex items-center space-x-4">
                      <button
-                      onClick={() => setShowLogin(true)}
+                      // onClick={() => setShowLogin(true)}
                       className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       +91 78389 04064
@@ -168,7 +168,7 @@
                   </>
                 ) : (
                   <>
-                    <button
+                    {/* <button
                       onClick={() => {
                         setShowLogin(true);
                         setMobileMenuOpen(false);
@@ -176,8 +176,8 @@
                       className="block w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50"
                     >
                       Sign In
-                    </button>
-                    <button
+                    </button> */}
+                    {/* <button
                       onClick={() => {
                         setShowSignup(true);
                         setMobileMenuOpen(false);
@@ -185,7 +185,7 @@
                       className="block w-full text-left px-3 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
                     >
                       Sign Up
-                    </button>
+                    </button> */}
                   </>
                 )}
               </div>

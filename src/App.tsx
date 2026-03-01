@@ -14,6 +14,7 @@ export type Page = 'home' | 'about' | 'products' | 'product-detail' | 'contact' 
 
 export interface PageParams {
   slug?: string;
+  medicine?: any;
 }
 
 function App() {
