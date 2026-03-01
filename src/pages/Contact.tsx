@@ -216,7 +216,7 @@ export default function Contact() {
               </div>
             ))}
 
-            <div className="bg-blue-600 rounded-lg shadow-md p-6 text-white">
+            {/* <div className="bg-blue-600 rounded-lg shadow-md p-6 text-white">
               <h3 className="font-semibold mb-2">Emergency Support</h3>
               <p className="text-sm text-blue-100 mb-4">
                 For urgent pharmaceutical inquiries or medical emergencies, please contact your local emergency services.
@@ -224,14 +224,14 @@ export default function Contact() {
               <p className="text-sm">
                 Emergency Hotline: 911
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="mt-12 bg-white rounded-lg shadow-md overflow-hidden">
           <div className="aspect-w-16 aspect-h-9">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6173401840567!2d-73.98823668459395!3d40.748817979327714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1635959999999!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13855.602884151111!2d77.2289405911092!3d28.567696029554267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce48a82987b6b%3A0x1eaf5421db44c362!2sLajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin%22>"
               width="100%"
               height="400"
               style={{ border: 0 }}

@@ -1,8 +1,8 @@
   import { useState } from 'react';
   import { useAuth } from '../../contexts/AuthContext';
-  import { User, Menu, X, Pill } from 'lucide-react';
-  import Login from '../auth/Login';
-  import Signup from '../auth/Signup';
+  import { User, Menu, X } from 'lucide-react';
+  
+  import logo from '../../assets/products/logo.jpeg';
 
   interface HeaderProps {
     currentPage: string;
@@ -36,7 +36,12 @@
                 onClick={() => onNavigate('home')}
                 className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
               >
-                <Pill className="w-8 h-8" />
+                
+                <img
+                 src={logo}
+                 alt="Sanctum Chemicals Logo"
+                 className="w-9 h-9 object-contain"
+                 />
                 <span className="text-xl font-bold">Sanctum Chemicals</span>
               </button>
 
@@ -85,18 +90,18 @@
                   </>
                 ) : (
                   <div className="hidden md:flex items-center space-x-4">
-                    <button
+                     <button
                       onClick={() => setShowLogin(true)}
-                      className="text-gray-700 hover:text-blue-600 transition-colors"
+                      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                     >
-                      Sign In
+                      +91 78389 04064
                     </button>
-                    <button
+                    {/*<button
                       onClick={() => setShowSignup(true)}
                       className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       Sign Up
-                    </button>
+                    </button> */}
                   </div>
                 )}
 
@@ -188,7 +193,7 @@
           )}
         </header>
 
-        {showLogin && (
+        {/* {showLogin && (
           <Login
             onClose={() => setShowLogin(false)}
             onSwitchToSignup={() => {
@@ -206,7 +211,7 @@
               setShowLogin(true);
             }}
           />
-        )}
+        )} */}
       </>
     );
   }
